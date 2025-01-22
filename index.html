@@ -11,12 +11,18 @@
         }
             .bia{
                 border-radius: 15px; 
+               /* display: block;
+                margin: 0 auto;
+                max-width: 100%; 
+                height: auto; */
             }
 
             .meuespaco {
                 width: auto;   
                 height: 300px;
             }
+
+            
 
         /* Estilos para tamanhos menores */
         @media screen and (max-width: 916px) {
@@ -101,6 +107,7 @@
     </style>
         <title>Psicóloga Maria Beatriz</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="format-detection" content="telephone=no"> 
         <link rel="stylesheet" href="./css/swiper-bundle.min.css">
         <link rel="stylesheet" href="./css/style.css">
         <link rel="stylesheet" href="./css/mediaqueries.css">
@@ -129,7 +136,9 @@
         <section class="row2">
             <div class="home" id="homePage">
                 <div class="content">
-                    <h1><span>Psicóloga <br>CRP - 13 12406</span></h1>
+                    <h1></h1>
+
+                    <h2>Psicóloga <br>CRP - 13/12406</h2>
                     <p>Atendimento ético e sensível de crianças, adolescentes, adultos e idosos.</p>    
                     <a href="#contattiPage">Contate-me</a>
                 </div>
@@ -141,25 +150,24 @@
 
         <section class="servizi" id="sobreMim">
             <div class="serviziTitle">
-                <h1>Sobre mim</h1>
-                <div class="row3">
-                    <div class="container">
-                        <br>
-                        <p>Olá! Sou Maria Beatriz Mota, psicóloga formada pela Universidade Federal da Paraíba. Trabalho como psicóloga com orientação psicanalítica e apoio-me nas construções teóricas de Freud e Lacan, sobretudo. Atualmente, além de atender em consultório particular, sou colaboradora externa na Clínica Escola da UFPB, no projeto de extensão Aimée, onde também realizo escuta psicológica.</p>
-                    </div>
-                    <div>
-                        <img src="./img/bia.jpeg" class="bia" alt="foto da psicóloga">
-                    </div>
-                        
+                <h1>Sobre mim</h1>  
+            <div class="row3">
+                <div class="container">
+                    <br>
+                    <p>Olá! Sou Maria Beatriz Mota, psicóloga formada pela Universidade Federal da Paraíba. Trabalho como psicóloga com orientação psicanalítica e apoio-me nas construções teóricas de Freud e Lacan, sobretudo. Atualmente, além de atender em consultório particular, sou colaboradora externa na Clínica Escola da UFPB, no projeto de extensão Aimée, onde também realizo escuta psicológica.</p>
                 </div>
-                
+                <div class="container2">
+                    <img src="./img/bia.jpeg" class="bia" alt="foto da psicóloga">
+                </div>
+            </div>
             </div>  
+            
         </section>
 
         <section class="servizi" id="serviziPage">
         
             <div class="servicesContent">
-                <div class="container">
+                <div class="container2">
                     <div class="row">
                         <div class="service2">
                             <h2>Um momento de angústia pode ser uma oportunidade para mudar o que poder ser mudado.</h2>
@@ -168,7 +176,7 @@
                             <h2>O despertar da adolescência e seu curso podem vir acompanhados de dificuldades. Uma escuta psicologica é um caminho para construir resposta singulares a suas mudanças.</h2>
                         </div>
                         <div class="service2">
-                            <h2>Um momento pra a criança construir suas respostas diante da vida. Um espaço e ajuda para a crianca elaborar, em sua singularidade, aquilo que a atravessa.</h2>
+                            <h2>O tratamento com crianças pode ser um momento pra que ela construa suas respostas diante da vida. Um espaço e ajuda para a crianca elaborar, em sua singularidade, aquilo que a atravessa.</h2>
                         </div>
                     </div>
                 </div>
@@ -343,16 +351,20 @@
             <div class="servicesContent"></div>
            
                 <div class="row3">
-                    <div class="service">
-                        <div onclick="window.location.href='https://wa.me/5583987297115';">
-                        <i class="fa-brands fa-whatsapp"></i>
-                        <h2> Marque uma sessão comigo <br>(83)987297115</h2>
+                    <div class="container">
+                        <div class="service">
+                            <div onclick="window.location.href='https://wa.me/5583987297115';">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            <h2> Marque uma sessão comigo <br>(83)987297115</h2>
+                            </div>
                         </div>
                     </div>
-                    <div class="service">
-                        <div onclick="window.location.href='https://www.instagram.com/psimariabeatrizmota/';">
-                        <i class="fa-brands fa-instagram"></i>
-                        <h2> Conheça meu conteúdo no instagram <br> @psimariabeatrizmota</h2>
+                    <div class="container">
+                        <div class="service">
+                            <div onclick="window.location.href='https://www.instagram.com/psimariabeatrizmota/';">
+                            <i class="fa-brands fa-instagram"></i>
+                            <h2> Conheça meu conteúdo no instagram <br> @psimariabeatrizmota</h2>
+                            </div>
                         </div>
                     </div>
                 </div>
