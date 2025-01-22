@@ -218,6 +218,9 @@ a {
 .home .content h1 span {
     font-size: 1em;
     font-weight: 600;
+    pointer-events: none; /* Impede o comportamento de link clicável */
+    user-select: none; /* Impede que o texto seja selecionado */
+    color: inherit; /* Garante que a cor do texto seja herdada */
 }
 
 .home .content p {
