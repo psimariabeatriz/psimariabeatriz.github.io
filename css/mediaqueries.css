@@ -42,7 +42,7 @@
     }
 
     .logo a{
-        font-size: 40px;
+        font-size: 45px;
     }
     .home .content {
         margin-left: 40px;
@@ -78,10 +78,11 @@
         line-height: 50px;
     }
 
-        
-    .home .content h1 span {
-        font-size: 0.8em;
+    .home .content h2 {
+        font-size: 2.3em;
+        line-height: 50px;
     }
+
 
     .home .content p {
         font-size: 1.5em;
@@ -99,8 +100,16 @@
         padding-left: 20px;
         padding-right: 20px;
     }
-    .logo a{
-        font-size: 27px;
+
+
+    .home .content h1 {
+        font-size: 2.3em;
+        line-height: 50px;
+    }
+
+    .home .content h2 {
+        font-size: 2.1em;
+        line-height: 50px;
     }
 }
 
@@ -112,9 +121,23 @@
 
 @media screen and (max-width: 370px) {
     .home .content h1 {
-        font-size: 2.5em;
+        font-size: 2.7em;
         line-height: 50px;
     }
+    .home .content h2 {
+        font-size: 2em;
+        line-height: 50px;
+    }
+    .servizi, .contatti {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+
 }
 
 @media screen and (max-width: 324px) {
@@ -126,7 +149,7 @@
     }
 
     .logo a{
-        font-size: 22px;
+        font-size: 27px;
     }
 }
 
