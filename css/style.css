@@ -223,6 +223,16 @@ a {
     color: inherit; /* Garante que a cor do texto seja herdada */
 }
 
+
+.home .content h2 {
+    font-size: 3em;
+    font-weight: 600;
+    text-transform: uppercase;
+    pointer-events: none;
+    user-select: none;
+    color: inherit; 
+}
+
 .home .content p {
     margin-bottom: 58px;
     font-size: 2em;
@@ -300,6 +310,19 @@ a {
     height: fit-content;
 }
 
+
+.container2 {
+    width: 100%;
+    height: fit-content;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.container p{
+    color: var(--mainly-font-color);
+    font-size: 1em;
+}
+
 .row {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -332,7 +355,7 @@ a {
     text-align: center;
     padding: 50px 0px;
     border-radius: 10px;
-    font-size: 14px;
+    font-size: 12px;
     cursor: pointer;
     background-color: var(--button-color);
     transition: transform 0.5s, background 0.5s;
