@@ -65,4 +65,34 @@ var swiper = new Swiper(".slide-content", {
     },
 });
 
+let players = [];
 
+function onYouTubeIframeAPIReady() {
+    document.querySelectorAll('.video-container').forEach((container, index) => {
+        let videoId = container.getAttribute('data-video-id');
+        
+        players[index] = new YT.Player(container, {
+            height: '315',
+            width: '560',
+            videoId: videoId,
+            playerVars: {
+                'autoplay': 0,
+                'modestbranding': 1,
+                'rel': 0
+            },
+            events: {
+                'onStateChange': onPlayerStateChange
+            }
+        });
+    });
+}
+
+function onPlayerStateChange(event) {
+    if (event.data === YT.PlayerState.PLAYING) {
+        players.forEach(player => {
+            if (player !== event.target) {
+                player.pauseVideo();
+            }
+        });
+    }
+}
