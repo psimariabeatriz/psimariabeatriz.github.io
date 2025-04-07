@@ -96,3 +96,14 @@ function onPlayerStateChange(event) {
         });
     }
 }
+
+function toggleText(elementId) {
+    const container = document.getElementById(elementId);
+    container.classList.toggle('expanded');
+    const button = container.querySelector('.read-more-btn');
+    if (container.classList.contains('expanded')) {
+        button.textContent = 'Ler menos';
+    } else {
+        button.textContent = 'Ler mais';
+    }
+}
