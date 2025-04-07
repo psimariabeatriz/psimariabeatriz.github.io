@@ -3,24 +3,25 @@
     <head>
         <style>
            iframe {
-            border: 1px solid #ccc; 
-            border-radius: 15px;   
-            overflow: hidden;      
-            width: 100%;           
-            height: 450px;         
+            width: 90%;
+            height: 320px;
+            margin-top: 20px;
+            border-radius: 15px;
         }
 
             .bia{
                 border-radius: 15px; 
-               /* display: block;
+                display: block;
                 margin: 0 auto;
                 max-width: 100%; 
-                height: auto; */
+                height: auto;
             }
 
             .meuespaco {
-                width: auto;   
-                height: 300px;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+                max-width: 100%;
             }
 
             
@@ -28,57 +29,28 @@
         /* Estilos para tamanhos menores */
         @media screen and (max-width: 916px) {
             iframe {
-                height: 400px;
+                height: 280px;
             }
-
-            .bia {
-                height:500px;
-            }
-            .meuespaco {
-                height: 270px;
-            }
-            
         }
 
         @media screen and (max-width: 728px) {
             iframe {
-                height: 350px;
+                height: 220px;
             }
-            
-            .bia {
-                height:400px;
-            }
-
-            .meuespaco {
-                height: 250px;
-            }
-
         }
 
         @media screen and (max-width: 567px) {
+            .local-images {
+                grid-template-columns: 1fr;
+            }
             iframe {
-                height: 300px;
-            }
-
-            .bia {
-                height:350px;
-            }
-
-            .meuespaco {
                 height: 200px;
             }
-
-            
-            .service2 h2{
-                 font-size: 1.2em; 
-            }
-           
         }
-
 
         @media screen and (max-width: 430px) {
             iframe {
-                height: 250px;
+                height: 150px;
             }
 
             .bia {
@@ -86,7 +58,7 @@
             }
 
             .meuespaco{
-                height: 190px;
+                height: auto;
             }
 
 
@@ -94,16 +66,98 @@
 
         @media screen and (max-width: 324px) {
             iframe {
-                height: 200px;
+                height: 150px;
             }
 
             .bia {
-                height:180px;
+                height:px;
             }
 
             .meuespaco {
-                height: 150px;
+                height: auto;
             }
+        }
+
+        .text-with-read-more .truncate-text {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .text-with-read-more.expanded .truncate-text {
+            display: block;
+        }
+
+        .read-more-btn {
+            background: var(--button-color);
+            color: var(--second-light-color);
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+            font-size: 1em;
+            transition: 0.3s ease;
+        }
+
+        .read-more-btn:hover {
+            background: var(--primary-dark-color);
+        }
+
+        .local-images {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+
+        .row3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            align-items: start;
+            padding-top: 20px;
+        }
+
+        .container2 {
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+
+        .bia {
+            margin-top: 0;
+        }
+
+        .servizi, .servizi2 {
+            position: relative;
+            width: 100%;
+            clear: both;
+            padding-bottom: 60px;
+        }
+
+        .serviziTitle {
+            height: fit-content;
+            width: 100%;
+            padding-top: 120px;
+            padding-bottom: 0;
+        }
+
+        .row3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            align-items: start;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            width: 100%;
+            position: relative;
+        }
+
+        .container3, .container2, .container {
+            min-height: 100%;
+            position: relative;
         }
     </style>
         <title>Psicóloga Maria Beatriz</title>
@@ -130,9 +184,12 @@
                 <li onclick="scrollToSection('homePage')"><a>Home</a></li>
                 <li onclick="scrollToSection('perguntas')"><a>Perguntas</a></li>
                 <li onclick="scrollToSection('sobreMim')"><a>Sobre Mim</a></li>
+                <li onclick="scrollToSection('sobreDepressao')"><a>Sobre a Depressão</a></li>
+                <li onclick="scrollToSection('sobreCriancas')"><a>Sobre a Criança</a></li>
+                <li onclick="scrollToSection('sobreAdolescentes')"><a>Sobre o Adolescente</a></li>
                 <li onclick="scrollToSection('testimonianzePage')"><a>Meus Trabalhos</a></li>
-                <li onclick="scrollToSection('localAtendimento')"><a>Local de atendimento</a></li>
                 <li onclick="scrollToSection('contattiPage')"><a>Contato</a></li>
+                <li onclick="scrollToSection('localAtendimento')"><a>Local de atendimento</a></li>
             </ul>
         </div>
 
@@ -147,11 +204,10 @@
                 </div>
             </div>
             <div class="home" id="homePage">
-                <img src="./img/homeBG4.png" alt="foto da psicóloga">
+                <img src="./img/homeBG4.jpeg" alt="foto da psicóloga">
             </div>
         </section>
 
-        
         <section class="testimonianze" id="perguntas">
             <div class="testimonianzeTitle">
                 <h1>Perguntas</h1>
@@ -160,8 +216,22 @@
                 <div class="slide-container swiper">
                     <div class="slide-content">
                         <div class="card-wrapper swiper-wrapper">
+                            
+                            <div class="card2 swiper-slide">
+                                <div class="image-content">
+                                    <span class="overlay"></span>
+        
+                                    <div class="card-image">
+                                        <div class="video-container" data-video-id="AuY6mVc69T8"></div>
+                                    </div>
+                                </div>
+        
+                                <div class="card-content">
+                                    <h2 class="name">Sobre a ética na psicanálise </h2> 
+                                </div>
+                            </div>
 
-                            <div class="card swiper-slide">
+                            <div class="card2 swiper-slide">
                                 <div class="image-content">
                                     <span class="overlay"></span>
         
@@ -175,7 +245,7 @@
                                 </div>
                             </div>
 
-                            <div class="card swiper-slide">
+                            <div class="card2 swiper-slide">
                                 <div class="image-content">
                                     <span class="overlay"></span>
         
@@ -186,20 +256,6 @@
         
                                 <div class="card-content">
                                     <h2 class="name"> Sobre a psicoterapia com crianças</h2>
-                                </div>
-                            </div>
-
-                            <div class="card swiper-slide">
-                                <div class="image-content">
-                                    <span class="overlay"></span>
-        
-                                    <div class="card-image">
-                                        <div class="video-container" data-video-id="AuY6mVc69T8"></div>
-                                    </div>
-                                </div>
-        
-                                <div class="card-content">
-                                    <h2 class="name">Sobre a ética na psicanálise </h2> 
                                 </div>
                             </div>
                             
@@ -220,20 +276,23 @@
             <div class="row3">
                 <div class="container">
                     <br>
-                    <p>Olá! Sou Maria Beatriz Mota, psicóloga formada pela Universidade Federal da Paraíba. Trabalho como psicóloga com orientação psicanalítica e apoio-me nas construções teóricas de Freud e Lacan, sobretudo. Atualmente, além de atender em consultório particular, sou colaboradora externa na Clínica Escola da UFPB, no projeto de extensão Aimée, onde também realizo escuta psicológica.</p>
+                    <p2>Olá! Sou Maria Beatriz Mota, psicóloga formada pela Universidade Federal da Paraíba. Trabalho como psicóloga com orientação psicanalítica e apoio-me nas construções teóricas de Freud e Lacan, sobretudo. Atualmente, além de atender em consultório particular, sou colaboradora externa na Clínica Escola da UFPB, no projeto de extensão Aimée, onde também realizo escuta psicológica.</p2>
                 </div>
                 <div class="container2">
-                    <img src="./img/bia.jpeg" class="bia" alt="foto da psicóloga">
+                    <img src="./img/bia.png" class="bia" alt="foto da psicóloga">
                 </div>
             </div>
             </div>  
             
         </section>
 
-        <section class="servizi" id="serviziPage">
         
+        
+        <section class="servizi" id="serviziPage">
+            
             <div class="servicesContent">
                 <div class="container2">
+                    <br><br>
                     <div class="row">
                         <div class="service2">
                             <h2>Um momento de angústia pode ser uma oportunidade para mudar o que poder ser mudado.</h2>
@@ -243,13 +302,138 @@
                         </div>
                         <div class="service2">
                             <h2>O tratamento com crianças pode ser um momento pra que ela construa suas respostas diante da vida. Um espaço e ajuda para a criança elaborar, em sua singularidade, aquilo que a atravessa.</h2>
-                        </div>
+                        </div>  
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="testimonianze" id="testimonianzePage">
+        
+        <section class="servizi2" id="sobreDepressao">
+            <div class="serviziTitle">
+                <h1>Sobre a depressão</h1> 
+                <div class="row3"> 
+                    <div class="container">
+                        <div class="text-with-read-more" id="depressaoText">
+                            <p> 
+                                <span class="negrito">Ser depressivo é diferente de estar depressivo</span>. </p>
+                                <p>Entre o <span class="negrito">"ser"</span> e o <span class="negrito">"estar"</span> há quilômetros de distância.</p>
+                                <span class="truncate-text">
+                                    <p>Na clínica, não me guio tanto pelo estatuto “crônico” da depressão, como se houvesse
+                                        pessoas que são depressivas. Considero que há estados depressivos que ocorrem em
+                                        algum momento da vida de uma pessoa, sendo esta portadora de uma história de vida que
+                                        não é incoerente com o estado depressivo.</p>
+                                    <p><span class="negrito">Estar triste tem começo, meio e fim.</span> E é preciso se apropriar da própria tristeza para
+                                        entendê-la e lidar com ela de uma forma diferente.</p>
+
+                                    <p>Considerar a depressão, a melancolia e a tristeza como um estado implica reconhecer que
+                                        isso pode ser mudado. Para que se mude, é preciso reconstruir a história de uma vida
+                                        inteira e fazer com que algo não digerido do passado finalmente o seja.</p>
+                                    <p> É necessário <span class="negrito">transformar o que pode ser transformado no presente e aprender a lidar
+                                        de maneira diferente com aquilo que não se pode mudar</span>. Assim como é essencial parar
+                                        de repetir atitudes prejudiciais consigo mesmo — aquelas cuja repetição, muitas vezes, vem
+                                        daquilo que foi varrido para debaixo do tapete, que se tenta esquecer ou negar.</p>
+                                    <p>Algumas perguntas podem mobilizar o que já esteve fixo por muito tempo, fazendo
+                                        respostas prontas (e insuficientes) se dobrarem em novas perguntas, que demandam um
+                                        tanto mais de vida de quem já não quer viver.</p>
+                                    <p>O tratamento com um psicólogo pode, enfim, fazer alguém se implicar naquilo que é só seu:
+                                        seus sintomas, seu mal-estar, sua cura, sua tristeza, sua maneira de ver a própria vida.</p>    
+                                </span>
+                            </p>
+                            <button onclick="toggleText('depressaoText')" class="read-more-btn">Ler mais</button>
+                        </div>
+                    </div>
+                    <div class="container2" style="display: flex; align-items: flex-start;">    
+                        <img src="./img/depressao.jpeg" class="bia" alt="foto de depressão">
+                    </div>
+                </div>  
+            </div>
+        </section>
+
+        <section class="servizi" id="sobreCriancas">
+            <div class="serviziTitle">
+                <h1>Sobre o tratamento de crianças</h1>  
+            <div class="row3">
+                <div class="container3">
+                    <br>
+                    <div class="text-with-read-more" id="criancasText">
+                        <p><span class="negrito">Oportunizar a uma criança um espaço para digerir seus problemas consigo mesma e
+                            com seu entorno propicia que ela tenha uma vida adulta diferente e viva mais
+                            proveitosamente sua infância.</span></p>
+                            <span class="truncate-text">
+                                <p>Na clínica com crianças, são utilizados recursos específicos para que aquele espaço se
+                                    torne acolhedor e propício ao tratamento.</p>
+                                <p>As crianças, levadas pelos pais, muitas vezes não percebem de início que a sessão com a
+                                    psicóloga é um momento para que falem e tratem de suas angústias, com alguém
+                                    capacitado e confiável.</p>
+                                <p>Diante disso, os <span class="negrito">jogos e brincadeiras criam comunicações iniciais possíveis</span>, formando
+                                    um <span class="negrito"></span>vínculo de brincadeira</span> que, posteriormente, se torna um <span class="negrito">vínculo de trabalho conjunto</span>
+                                    para o tratamento.</p>
+                                <p>Mesmo através da brincadeira, o tratamento está presente. O psicólogo intervém na forma
+                                    como a criança se posiciona e utiliza os momentos lúdicos. </p>
+                                <p>Por exemplo, em brincadeiras de perde e ganha, há crianças que têm dificuldade em
+                                    perder, e outras que não se autorizam a ganhar. Essas situações já são propícias para que
+                                    a criança perceba suas dificuldades, a partir de intervenções delicadas e dosadas do
+                                    psicólogo.</p>
+                                <p>É importante destacar o potencial de um tratamento iniciado na infância — fase em que
+                                    muitos problemas começam a surgir e que, com frequência, são carregados para a vida
+                                    adulta.</p>
+                                <p>Muitas vezes, incômodos, inseguranças e “manias” têm início nesse período e, no entanto,
+                                    só mais tarde as pessoas se dão conta e procuram ajuda. Levar a criança ao psicólogo é
+                                    oferecer um espaço para <span class="negrito">desatar seus nós</span> e <span class="negrito"> seguir em frente com mais leveza.</span></p>
+                                </span>
+                        </p>
+                        <button onclick="toggleText('criancasText')" class="read-more-btn">Ler mais</button>
+                    </div>
+                </div>
+                <div class="container2">    
+                    <br>
+                    <img src="./img/criancas2.jpeg" class="bia" alt="foto da psicóloga com brinquedos">
+                </div>
+            </div>
+            </div>  
+            
+        </section>
+
+
+        
+        <section class="servizi2" id="sobreAdolescentes">
+            <div class="serviziTitle">
+                <h1>Sobre o tratamento de adolescentes</h1>  
+                <div class="row3">
+                    <div class="container3">
+                        <div class="text-with-read-more" id="adolescentesText">
+                            <p><span class="negrito">Fazer uma parceria estável e segura com o adolescente em sua angústia solitária.</span></p>
+                                <span class="truncate-text">
+                                    <p>A adolescência é o período do florescer do corpo e dos desejos — e isso implica
+                                        dificuldades.</p>
+                                    <p>Frente ao uso desenfreado de celulares, à pressão por notas, vestibular, exigências
+                                        estéticas e comportamentos autodestrutivos, a adolescência contemporânea tem suas
+                                        particularidades e dores.</p>
+                                    <p>O jovem é inserido em um <span class="negrito">mundo novo</span>, com novas demandas, mudanças e
+                                        responsabilidades que, por vezes, não consegue acompanhar.</p>
+                                    <p>Ao perceber um descompasso com esse novo mundo, o adolescente frequentemente
+                                        acredita que seus problemas são unicamente seus — e se fecha a intervenções</p>
+                                    <p>Oferecer tratamento é criar uma <span class="negrito">escuta sigilosa e segura</span> para o ser adolescente e suas
+                                        angústias.</p>
+                                    <p>Formar uma parceria diante das dificuldades do adolescer pode representar uma ajuda
+                                        essencial e um <span class="negrito">resgate da solidão adolescente.</span></p>
+                                    </span>
+                            </p>
+                            <button onclick="toggleText('adolescentesText')" class="read-more-btn">Ler mais</button>
+                        </div>
+                    </div>
+                    <div class="container2">    
+                        <img src="./img/adolescente.jpeg" class="bia" alt="foto de adolescente">
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        
+
+
+        <section class="testimonianze2" id="testimonianzePage">
             <div class="testimonianzeTitle">
                 <h1>Meus Trabalhos</h1>
                 <p>percursos na psicologia e na psicanálise</p>
@@ -269,7 +453,7 @@
                                 </div>
         
                                 <div class="card-content">
-                                    <h2 class="name">Banner de divulgação do Trabalho de Conclusão de Curso: “Miguilim e seu romance familiar: uma leitura psicanalítica. </h2>
+                                    <h2 class="name">Banner de divulgação do Trabalho de Conclusão de Curso: "Miguilim e seu romance familiar: uma leitura psicanalítica. </h2>
                                     <p class="description"> Sob oritenção da profa. Dra. Cleide Pereira Monteiro. </p>
                                 </div>
                             </div>
@@ -299,7 +483,7 @@
                                 </div>
         
                                 <div class="card-content">
-                                    <h2 class="name"> Coautoria de apresentação oral – I Amostra de Saúde P’ública da Paraíba: o SUS é o nosso lugar </h2>
+                                    <h2 class="name"> Coautoria de apresentação oral – I Amostra de Saúde P'ública da Paraíba: o SUS é o nosso lugar </h2>
                                     <p class="description">Escola Paraibana de Saúde Pública. </p>
                                 </div>
                             </div>
@@ -382,31 +566,9 @@
                 </div>
             </div>
         </section>
-        <section class="servizi" id="localAtendimento">
-            <div class="serviziTitle">
-                <h1>Local de atendimento</h1>
-                <p></p>
-                <div class="row">
-                    <div class="container">
-                        <br>
-                        <p> EcoBusiness Center </p> <br>
-                        <p> R. Antônio Rabelo Júnior, 161 - Miramar, João Pessoa - PB, 58032-090</p>
-                        <br>
-                        <img src="./img/meuespaco1.jpeg" alt="foto do local de atendimento" class="meuespaco">
-                        <img src="./img/meuespaco2.jpeg" alt="foto do local de atendimento" class="meuespaco">     
-                    
-                    </div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.067954311514!2d-34.8372111!3d-7.1181239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd3708ff68d5%3A0xa8670ee92d4fdb44!2sEco%20Business%20Center!5e0!3m2!1sen!2sbr!4v1737478181035!5m2!1sen!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
-            </div>  
-        </section>
-        
-        <section class="servizi" id="meuEspaço">
-                <div class="row4">
-                
-                </div>
-        </section>
 
+        
+        
         <section class="contatti" id="contattiPage">
             <div class="contattiTitle">
                 <h1>Contate-me</h1>
@@ -435,9 +597,52 @@
             
         </section>
 
+        <section class="servizi" id="localAtendimento">
+            <div class="serviziTitle">
+                <h1>Local de atendimento</h1>
+                <div class="row">
+                    <div class="container">
+                        <br>
+                        <p> EcoBusiness Center </p> <br>
+                        <p> R. Antônio Rabelo Júnior, 161 - Miramar, João Pessoa - PB, 58032-090</p>
+                        <br>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.067954311514!2d-34.8372111!3d-7.1181239!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7acdd3708ff68d5%3A0xa8670ee92d4fdb44!2sEco%20Business%20Center!5e0!3m2!1sen!2sbr!4v1737478181035!5m2!1sen!2sbr" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="container">
+                        <div class="local-images">
+                            <img src="./img/meuespaco1.jpeg" alt="foto do local de atendimento" class="meuespaco">
+                            <img src="./img/meuespaco2.jpeg" alt="foto do local de atendimento" class="meuespaco">
+                            <img src="./img/meuespaco3.jpeg" alt="foto do local de atendimento" class="meuespaco">
+                            <img src="./img/meuespaco4.jpeg" alt="foto do local de atendimento" class="meuespaco">
+                        </div>
+                    </div>
+                </div>
+            </div>  
+        </section>
+        
+        
+
         <script src="https://www.youtube.com/iframe_api"></script>
         <script src="./js/swiper-bundle.min.js"></script>
         <script src="./js/script.js"></script>
+        <script>
+            function toggleText(elementId) {
+                const container = document.getElementById(elementId);
+                container.classList.toggle('expanded');
+                const button = container.querySelector('.read-more-btn');
+                if (container.classList.contains('expanded')) {
+                    button.textContent = 'Ler menos';
+                } else {
+                    button.textContent = 'Ler mais';
+                }
+            }
+        </script>
     </body>
 </html>
 
