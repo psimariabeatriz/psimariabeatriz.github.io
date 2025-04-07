@@ -47,7 +47,7 @@
     .home .content {
         margin-left: 40px;
     }
-    .servizi, .contatti {
+    .servizi, .servizi2, .contatti {
         padding-left: 40px;
         padding-right: 40px;
     }
@@ -64,9 +64,38 @@
         padding-right: 10px;
         text-align: center;
     }
+
+    .container p2{
+        font-size: 1.2em;
+    }
+
+    .text-with-read-more .truncate-text {
+        font-size: 1.0em;
+        text-align: justify;
+    }
+
+    .text-with-read-more p {
+        font-size: 1.2em;
+        text-align: justify;
+    }
+
+    .container p2 { 
+        font-size: 1.2em;
+        text-align: justify;
+    }
+
+    .container p, .container2 p, .container3 p {
+        text-align: justify;
+    }
+
     .sendEmailSection {
         align-items: center;
         justify-content: center;
+    }
+
+    .read-more-btn {
+        display: block;
+        margin: 10px auto;
     }
 
     .logo a{
@@ -96,7 +125,7 @@
     .serviziTitle h1, .testimonianzeTitle h1, .contattiTitle h1 {
         font-size: 2.3em;
     }
-    .servizi, .contatti {
+    .servizi, .servizi2, .contatti {
         padding-left: 20px;
         padding-right: 20px;
     }
@@ -128,7 +157,7 @@
         font-size: 2em;
         line-height: 50px;
     }
-    .servizi, .contatti {
+    .servizi, .servizi2, .contatti {
         padding-left: 10px;
         padding-right: 10px;
     }
@@ -136,6 +165,8 @@
     .container{
         width: 90%;
     }
+
+
 
 
 }
