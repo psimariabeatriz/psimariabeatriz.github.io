@@ -115,7 +115,7 @@ a {
     top: 100px;
     right: -330px;
     width: 300px;
-    height: 320px;
+    height: 580px;
     background: var(--button-color);
     transition: 0.5s;
     display: flex;
@@ -274,6 +274,11 @@ a {
     object-fit: cover;
 }
 
+.negrito {
+    font-weight: bold;
+}
+  
+
 .servizi {
     height: fit-content;
     width: 100%;
@@ -281,6 +286,17 @@ a {
     padding-left: 100px;
     padding-right: 100px;
 }
+
+
+.servizi2 {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--second-light-color);
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+
 
 .serviziTitle {
     height: fit-content;
@@ -322,6 +338,20 @@ a {
     color: var(--mainly-font-color);
     font-size: 1.5em;
 }
+
+.container p2{
+    color: var(--mainly-font-color);
+    font-size: 1.5em;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+
+.container3 p{
+    color: var(--mainly-font-color);
+    font-size: 1.5em;
+}
+
 
 .row {
     display: grid;
@@ -421,6 +451,14 @@ a {
     padding-bottom: 100px;
 }
 
+
+.testimonianze2 {
+    height: fit-content;
+    width: 100%;
+    background-color: var(--primary-light-color);
+    padding-bottom: 100px;
+}
+
 .testimonianzeTitle {
     height: fit-content;
     width: 100%;
@@ -461,6 +499,13 @@ a {
 }
 
 .card {
+    border-radius: 10px;
+    /*background-color: var(--primary-light-color);*/
+    background-color: var(--second-light-color);
+}
+
+
+.card2 {
     border-radius: 10px;
     background-color: var(--primary-light-color);
 }
@@ -506,6 +551,28 @@ a {
     object-fit: cover;
     border-radius: 10px;
 }
+.video-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9; /* Mantém proporção de vídeo */
+    overflow: hidden;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-color: black; /* cor de fundo fallback */
+}
+
+/* Garante que qualquer conteúdo inserido lá dentro ocupa tudo */
+.video-container > * {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
 
 .card-image {
     position: relative;
@@ -715,6 +782,41 @@ a {
     color: var(--mainly-font-color);
 }
 
+.text-with-read-more .truncate-text {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.text-with-read-more.expanded .truncate-text {
+    display: block;
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.text-with-read-more p {
+    text-align: justify;
+    text-indent: 2em;
+}
+
+.read-more-btn {
+    background: var(--button-color);
+    color: var(--second-light-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+
+.read-more-btn:hover {
+    background: var(--primary-dark-color);
+}
 
 
 
