@@ -781,21 +781,19 @@ a {
 
     color: var(--mainly-font-color);
 }
-
 .text-with-read-more .truncate-text {
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
+    max-height: 6.5em; /* Limita a altura para aprox. 3 linhas */
     overflow: hidden;
+    position: relative;
+    transition: max-height 0.3s ease;
     text-align: justify;
     text-indent: 2em;
 }
 
 .text-with-read-more.expanded .truncate-text {
-    display: block;
-    text-align: justify;
-    text-indent: 2em;
+    max-height: 1000px; /* Mostra tudo */
 }
+
 
 .text-with-read-more p {
     text-align: justify;
